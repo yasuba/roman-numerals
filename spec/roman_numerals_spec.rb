@@ -36,5 +36,16 @@ let(:rm) {RomanNumerals.new}
     expect(rm.convert('XIV')).to eq 14
   end
 
+  it 'should be able to convert 1 to I' do
+    expect(rm.convert(1)).to eq 'I'
+  end
+
+  it 'should be able to convert 25 to XXV' do
+    expect(rm.convert(25)).to eq "XXV"
+  end
+
+  it "should be able to convert 83 to LXXXIII" do
+    expect(rm.convert(83)).to eq "LXXXIII"
+  end
 
 end
